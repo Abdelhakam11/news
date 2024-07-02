@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 9.38%;
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    padding: 5px;
+  }
+}
+.category-title-box {
+  background-color: #ebeef3;
+}
+.category-title-box--title {
+  background: -webkit-linear-gradient(#262626, #b8c2ce);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.news-container {
+  background-color: #ebeef3;
+  padding: 29px 30px 36px 36px;
+}
+.news-container--title {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+.news-container--box {
+  margin-bottom: 20px;
+}
+.news-container--box:last-child {
+  margin-bottom: 0;
+}
+.news-container--box--detials-container--detials {
+  padding-right: 20px;
+}
+.news-container--box--detials-container--detials--date {
+  font-size: 10px;
+}
+.news-container--box--detials-container--detials--title {
+  margin-top: 4px;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+.news-container--box--detials-container--detials--information {
+  font-size: 12px;
+}
+
+.cover-container {
+  background: url("../assets/images/news/sportsman-drinking-water.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.cover-container--btn-box {
+  top: 30px;
+  left: 36px;
+  z-index: 5;
+}
+.cover-container--btn-box--btn {
+  padding: 5px 18px !important;
+  font-size: 20px;
+}
+.cover-container--info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  color: white;
+  font-size: 36px;
+  background-color: rgba(0, 0, 0, 0.396);
+}
+.cover-container--info--title {
+  font-weight: 700;
+}
+.cover-container--info--title--date {
+  font-size: 18px;
+  color: white;
+  text-align: left;
+}
+
+.football-cover-container {
+  background-image: url(../assets/images/sports/players-give-handshake.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  min-height: 518px;
+}
+.football-cover-container--btn-box {
+  top: 31px;
+  left: 48px;
+  z-index: 5;
+}
+.football-cover-container--btn-box--btn {
+  padding: 5px 18px !important;
+  font-size: 20px;
+}
+.football-cover-container--info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  color: white;
+  font-size: 36px;
+  background-color: rgba(0, 0, 0, 0.396);
+}
+.football-cover-container--info--box--title {
+  font-weight: 700;
+}
+.football-cover-container--info--box--date {
+  font-size: 18px;
+  color: white;
+  text-align: left;
+}
+.football-cover-container--info--box--detials {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 992px) {
+  .cover-container,
+  .football-cover-container {
+    min-height: 85vh;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
