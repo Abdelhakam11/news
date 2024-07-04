@@ -1,0 +1,116 @@
+.news-container {
+  background-color: $light-color;
+  padding: 2.9rem 3rem 3.6rem 3.6rem;
+  &--title {
+    font-size: 2.8rem;
+    margin-bottom: 1.6rem;
+  }
+  &--box {
+    margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &--detials-container {
+      &--detials {
+        padding-right: 20px;
+        &--date {
+          font-size: 10px;
+        }
+        &--title {
+          margin-top: 4px;
+          margin-bottom: 12px;
+          font-size: 18px;
+        }
+        &--information {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.cover-container {
+  @include cover-container(
+    "../assets/images/news/sportsman-drinking-water.png"
+  );
+  overflow: hidden;
+  &--btn-box {
+    top: 30px;
+    left: 36px;
+    z-index: 5;
+    &--btn {
+      @include cover-btn();
+    }
+  }
+  &--info {
+    padding-bottom: 45px;
+    @include cover-title(white, 36px, rgba(0, 0, 0, 0.396), center);
+    &--title {
+      font-weight: 700;
+      font-size: 3.6rem;
+      &--date {
+        font-size: 1.8rem;
+        @include cover-date(white, 18px);
+      }
+    }
+  }
+}
+
+.football-cover-container {
+  margin-top: 8rem;
+  @include cover-container(
+    "../assets/images/sports/players-give-handshake.png"
+  );
+  overflow: hidden;
+  min-height: 518px;
+  &--btn-box {
+    top: 31px;
+    left: 48px;
+    z-index: 5;
+    &--btn {
+      @include cover-btn();
+    }
+  }
+  &--info {
+    padding-left: 48px;
+    padding-bottom: 45px;
+    @include cover-title(white, 36px, rgba(0, 0, 0, 0.396), start);
+    &--box {
+      &--title {
+        font-weight: 900;
+        font-size: 3.6rem;
+      }
+      &--date {
+        font-size: 1.8rem;
+        @include cover-date(white, 18px);
+      }
+      &--detials {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $screen-lg) {
+  .cover-container,
+  .football-cover-container {
+    min-height: 85vh;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .cover-container,
+  .football-cover-container {
+    &--btn-box {
+      top: 2rem;
+      left: 2rem;
+    }
+    &--info {
+      padding-bottom: 2rem;
+      padding-left: 2rem;
+      @include cover-title(white, 36px, rgba(0, 0, 0, 0.396), start);
+    }
+  }
+}
+
+.pagination-container {
+  @include pagination($light-color);
+}
