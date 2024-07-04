@@ -1,4 +1,11 @@
-@mixin cover-title($text-color, $font-size, $background-color,$align-items) {
+@mixin cover-container($imageUrl) {
+  background: url($imageUrl);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+@mixin cover-title($text-color, $font-size, $background, $align-items) {
   position: absolute;
   top: 0;
   left: 0;
@@ -10,7 +17,7 @@
   align-items: $align-items;
   color: $text-color;
   font-size: $font-size;
-  background-color: $background-color;
+  background: $background;
 }
 @mixin cover-date($text-color, $font-size) {
   font-size: $font-size;
@@ -20,4 +27,60 @@
 @mixin cover-btn() {
   padding: 5px 18px !important;
   font-size: 20px;
+}
+
+@mixin textLinear($start, $end) {
+  background: -webkit-linear-gradient($start, $end);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin pagination($background-color) {
+  padding-right: 25px !important;
+  padding-top: 25px !important;
+  background-color: $background-color;
+  &--menu {
+    gap: 5.6rem;
+    .item-circle {
+      width: 3.5rem;
+      line-height: 3.5rem;
+      border-radius: 50%;
+      text-align: center;
+      margin: auto;
+    }
+    &--item {
+      a {
+        background-color: transparent;
+        color: #262626ac;
+        border: none;
+        font-size: 2.4rem;
+        &:hover {
+          color: $light-color;
+          background-color: #262626b3;
+        }
+      }
+      &:first-child {
+        a {
+          padding: 0.5rem 2.3rem;
+          background-color: #bab8b8;
+          color: $light-color;
+        }
+      }
+      &:last-child {
+        a {
+          padding: 0.5rem 2.3rem;
+          background-color: #262626;
+          color: $light-color;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-sm) {
+    padding-right: 1rem !important;
+    padding-top: 1rem !important;
+    &--menu {
+      gap: 1.5rem;
+    }
+  }
 }

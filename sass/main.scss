@@ -1,116 +1,14 @@
+@import "./variables.scss";
 @import "./mixins.scss";
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-body {
-  padding: 0 9.38%;
-}
-@media only screen and (max-width: 1200px) {
-  body {
-    padding: 5px;
-  }
-}
 
-.category-title-box {
-  background-color: #ebeef3;
-  &--title {
-    background: -webkit-linear-gradient(#262626, #b8c2ce);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-.news-container {
-  background-color: #ebeef3;
-  padding: 29px 30px 36px 36px;
-  &--title {
-    font-size: 28px;
-    margin-bottom: 16px;
-  }
-  &--box {
-    margin-bottom: 20px;
-    &:last-child {
-      margin-bottom: 0;
-    }
-    &--detials-container {
-      &--detials {
-        padding-right: 20px;
-        &--date {
-          font-size: 10px;
-        }
-        &--title {
-          margin-top: 4px;
-          margin-bottom: 12px;
-          font-size: 18px;
-        }
-        &--information {
-          font-size: 12px;
-        }
-      }
-    }
-  }
-}
-
-.cover-container {
-  background: url("../assets/images/news/sportsman-drinking-water.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  &--btn-box {
-    top: 30px;
-    left: 36px;
-    z-index: 5;
-    &--btn {
-      @include cover-btn();
-    }
-  }
-  &--info {
-    @include cover-title(white, 36px, rgba(0, 0, 0, 0.396), center);
-    &--title {
-      font-weight: 700;
-      &--date {
-        @include cover-date(white, 18px);
-      }
-    }
-  }
-}
-
-.football-cover-container {
-  background-image: url(../assets/images/sports/players-give-handshake.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  min-height: 518px;
-  &--btn-box {
-    top: 31px;
-    left: 48px;
-    z-index: 5;
-    &--btn {
-      @include cover-btn();
-    }
-  }
-  &--info {
-    @include cover-title(white, 36px, rgba(0, 0, 0, 0.396), start);
-    &--box {
-      &--title {
-        font-weight: 700;
-      }
-      &--date {
-        @include cover-date(white, 18px);
-      }
-      &--detials {
-        font-size: 20px;
-      }
-    }
-  }
-}
-@media only screen and (max-width: 992px) {
-  .cover-container,
-  .football-cover-container {
-    min-height: 85vh;
-  }
-}
+//base layout
+@import "./styles/base.scss";
+//header
+@import "./styles/header.scss";
+//sections
+@import "./styles/categories-section.scss";
+@import "./styles/covers-section.scss";
+@import "./styles/trending-section.scss";
+@import "./styles/articles.scss";
+//footer
+@import "./styles/footer.scss";

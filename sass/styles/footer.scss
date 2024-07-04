@@ -1,0 +1,90 @@
+//footer
+footer {
+  .subscription {
+    margin-top: 8.2rem;
+    background-color: $light-color;
+    &--box {
+      &--title {
+        @include textLinear(#262626, $main-color);
+        font-size: 6rem;
+        font-weight: 900;
+      }
+      &--email {
+        margin-top: 4.3rem;
+        &--input {
+          font-size: 2.1rem;
+          padding: 1.5rem 2.4rem;
+          width: 51.4rem;
+        }
+        &--btn {
+          width: 7.4rem;
+          height: 100%;
+          font-size: 3.5rem;
+          padding: auto 3rem;
+        }
+      }
+    }
+    &--image {
+      width: 52rem;
+      background: url("../assets/images/main/Vector.png");
+      background-position: top left;
+      background-repeat: no-repeat;
+    }
+    @media only screen and (max-width: 1300px) {
+      .subscription {
+        &--box {
+          &--email {
+            &--input {
+              width: 39rem;
+            }
+          }
+        }
+        &--image {
+          width: 100%;
+        }
+      }
+    }
+    @media only screen and (max-width: 390px) {
+      .subscription {
+        &--box {
+          &--title {
+            font-size: 5rem;
+          }
+          &--email {
+            &--input {
+              width: 100%;
+              padding-left: 0.5rem;
+              font-size: 1.5rem;
+            }
+            &--btn {
+              width: 4rem;
+              height: 100%;
+              font-size: 2rem;
+              padding: auto 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .social-bar {
+    padding: 4.2rem 1rem;
+    &--list {
+      gap: 2.3rem;
+      &--icon-container {
+        width: 4.4rem;
+        height: 4.4rem;
+        background-color: #262626;
+        &--icon {
+          font-size: 3.5rem;
+          color: white;
+        }
+      }
+    }
+    .pagination-container {
+      background-color: transparent;
+      width: auto;
+      padding: 0 !important;
+    }
+  }
+}

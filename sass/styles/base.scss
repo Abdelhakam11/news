@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f5f5f5;
+  padding: 0 $main-lg-padding;
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    padding: 0 $main-lg-padding;
+  }
+  nav {
+    margin: 0 calc(-1 * $main-padding);
+  }
+}
+@media only screen and (max-width: $screen-sm) {
+  html {
+    font-size: 50%;
+  }
+}
+nav {
+  margin: 0 calc(-1 * $main-lg-padding);
+  padding: 0 $main-lg-padding;
+  background-color: white;
+  a {
+    font-size: 1.5rem !important;
+    padding: 1rem !important;
+  }
+  button {
+    font-size: 1.4rem !important;
+    padding: 0.15rem 1.3rem !important;
+  }
+}
