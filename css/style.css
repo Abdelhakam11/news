@@ -677,5 +677,8 @@ footer .social-bar .pagination-container {
   margin: 0 !important;
   padding: 0 !important;
 }
+footer .social-bar .pagination-container--menu {
+  margin-bottom: 0;
+}
 
 /*# sourceMappingURL=style.css.map */
