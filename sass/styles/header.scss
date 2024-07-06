@@ -5,9 +5,10 @@
 
     &--title {
       z-index: -1;
-      padding-top: 11rem;
+      padding-top: 11.2rem;
       line-height: 0.75;
       font-size: 8rem;
+      line-height: 0.75;
       font-weight: 900;
       @include textLinear(#262626, $main-color);
       text-transform: uppercase;
@@ -48,6 +49,7 @@
             -webkit-linear-gradient(rgba(255, 255, 255, 0), white),
             start
           );
+          padding-left: 1.8rem !important;
           &--title {
             font-size: 1.6rem;
             &--date {
@@ -65,11 +67,17 @@
     transform: translate(-35%, 0);
     &--info {
       font-size: 1.8rem;
+      margin-bottom: 2.4rem !important;
     }
     &--btn {
       font-size: 2rem;
       font-weight: bold;
       padding: 1.2rem 3.2rem;
+      border-radius: 0.6rem;
+      color: $dark-color;
+      line-height: 38px;
+      letter-spacing: calc(0.09 * 2rem);
+      font-weight: bold;
     }
   }
   @media only screen and (min-width: 1200px) and (max-width: 1400px) {

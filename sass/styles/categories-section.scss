@@ -5,7 +5,7 @@
     margin-bottom: 1.6rem;
   }
   &--container {
-    row-gap: 5rem;
+    --bs-gutter-x: 3rem !important;
     &--category {
       gap: 3rem !important;
       &--title-box {

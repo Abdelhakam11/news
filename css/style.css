@@ -28,16 +28,25 @@ body {
 }
 nav {
   margin: 0 -9.38vw;
-  padding: 0 9.38vw;
+  padding: 2.2rem 9.38vw !important;
   background-color: white;
 }
 nav a {
   font-size: 1.5rem !important;
+  font-family: "DM Sans", sans-serif;
+  color: rgba(38, 38, 38, 0.6) !important;
   padding: 1rem !important;
+  font-weight: 400;
 }
-nav button {
+nav .search-btn {
   font-size: 1.4rem !important;
-  padding: 0.15rem 1.3rem !important;
+  padding: 0.8rem 1.5rem !important;
+  border-radius: 0.6rem;
+  background: linear-gradient(#b8c2ce, #5d6268);
+  border: none !important;
+}
+nav .navbar-toggler {
+  font-size: 2rem !important;
 }
 
 .header-container {
@@ -48,9 +57,10 @@ nav button {
 }
 .header-container--main-title-box--title {
   z-index: -1;
-  padding-top: 11rem;
+  padding-top: 11.2rem;
   line-height: 0.75;
   font-size: 8rem;
+  line-height: 0.75;
   font-weight: 900;
   background: -webkit-linear-gradient(#262626, #b8c2ce);
   background-clip: text;
@@ -99,6 +109,7 @@ nav button {
   color: black;
   font-size: 1.6rem;
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0), white);
+  padding-left: 1.8rem !important;
 }
 .header-container--cards-list--container--card--info--title {
   font-size: 1.6rem;
@@ -114,11 +125,17 @@ nav button {
 }
 .header-container--details--info {
   font-size: 1.8rem;
+  margin-bottom: 2.4rem !important;
 }
 .header-container--details--btn {
   font-size: 2rem;
   font-weight: bold;
   padding: 1.2rem 3.2rem;
+  border-radius: 0.6rem;
+  color: #e1e8f0;
+  line-height: 38px;
+  letter-spacing: 0.18rem;
+  font-weight: bold;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
   .header-container .header-container--main-title-box--title {
@@ -173,7 +190,7 @@ nav button {
   margin-bottom: 1.6rem;
 }
 .categories--container {
-  row-gap: 5rem;
+  --bs-gutter-x: 3rem !important;
 }
 .categories--container--category {
   gap: 3rem !important;
@@ -210,32 +227,33 @@ nav button {
   }
 }
 
-.news-container {
-  background-color: #ebeef3;
-  padding: 2.9rem 3rem 3.6rem 3.6rem;
+.news {
+  margin-top: 8rem;
 }
-.news-container--title {
+.news .news-container {
+  background-color: #ebeef3;
+  padding: 2.9rem 3rem 1.6rem 3.6rem;
+}
+.news .news-container--title {
   font-size: 2.8rem;
   margin-bottom: 1.6rem;
 }
-.news-container--box {
-  margin-bottom: 2rem;
+.news .news-container--box {
+  margin-bottom: 2rem !important;
+  gap: 2rem !important;
 }
-.news-container--box:last-child {
-  margin-bottom: 0;
-}
-.news-container--box--detials-container--detials {
+.news .news-container--box--detials-container--detials {
   padding-right: 20px;
 }
-.news-container--box--detials-container--detials--date {
+.news .news-container--box--detials-container--detials--date {
   font-size: 10px;
 }
-.news-container--box--detials-container--detials--title {
+.news .news-container--box--detials-container--detials--title {
   margin-top: 4px;
   margin-bottom: 12px;
   font-size: 18px;
 }
-.news-container--box--detials-container--detials--information {
+.news .news-container--box--detials-container--detials--information {
   font-size: 12px;
 }
 
@@ -276,10 +294,12 @@ nav button {
   font-size: 3.6rem;
 }
 .cover-container--info--title--date {
-  font-size: 1.8rem;
-  font-size: 18px;
+  margin-bottom: 1.4rem;
+  line-height: 1.009;
+  font-size: 18px !important;
   color: white;
   text-align: left;
+  font-family: "DM Sans", sans-serif;
 }
 
 .football-cover-container {
@@ -318,13 +338,14 @@ nav button {
   background: rgba(0, 0, 0, 0.396);
 }
 .football-cover-container--info--box--title {
+  text-transform: uppercase;
   font-weight: 900;
   font-size: 3.6rem;
 }
 .football-cover-container--info--box--date {
-  font-size: 1.8rem;
-  font-size: 18px;
-  color: white;
+  line-height: 1.009;
+  font-size: 18px !important;
+  color: #f9fafc;
   text-align: left;
 }
 .football-cover-container--info--box--detials {
@@ -371,7 +392,9 @@ nav button {
 }
 .pagination-container--menu .item-circle {
   width: 3.5rem;
-  line-height: 3.5rem;
+  height: 3.5rem;
+  font-size: 2.4rem;
+  line-height: 0.6;
   border-radius: 50%;
   text-align: center;
   margin: auto;
@@ -404,6 +427,9 @@ nav button {
   .pagination-container--menu {
     gap: 1.5rem;
   }
+}
+.pagination-container--menu {
+  margin-bottom: 2.5rem;
 }
 
 .trending {
@@ -439,7 +465,7 @@ nav button {
 }
 .trending .trending-news--main-card--info--title-box {
   width: 100%;
-  padding: 0 2rem;
+  padding: 1.6rem 1.8rem 1.2rem;
   background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
 }
 .trending .trending-news--cards-container--list {
@@ -459,13 +485,24 @@ nav button {
   padding: 0.6rem 0.7rem;
 }
 .trending .clubs-ranking--table-container {
-  padding: 2rem 1.5rem 1.2rem;
+  padding: 1.9rem 0 1.2rem;
   background-color: #ebeef3;
   min-height: 30rem;
 }
 .trending .clubs-ranking--table-container--custom-table {
-  overflow-x: auto;
-  height: 26.8rem;
+  height: 26rem;
+}
+.trending .clubs-ranking--table-container--custom-table th:first-child,
+.trending .clubs-ranking--table-container--custom-table td:first-child {
+  padding-left: 3.1rem;
+}
+.trending .clubs-ranking--table-container--custom-table .club-details--name {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.trending .clubs-ranking--table-container--custom-table .club-details--logo {
+  margin-left: 1.081rem;
+  margin-right: 0.691rem;
 }
 .trending .clubs-ranking--table-container--custom-table thead {
   border-bottom: none;
@@ -473,14 +510,17 @@ nav button {
 .trending .clubs-ranking--table-container--custom-table thead th {
   border-bottom: none;
   font-size: 1.6rem;
-  font-weight: 600;
 }
 .trending .clubs-ranking--table-container--custom-table tbody tr:last-child th {
   border-bottom: none;
 }
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+  .trending .clubs-ranking .clubs-ranking--table-container--custom-table .club-details--logo {
+    margin: 0 0.2rem;
+  }
+}
 @media only screen and (max-width: 768px) {
   .trending .clubs-ranking .clubs-ranking--table-container {
-    padding: 0;
     min-height: auto;
   }
   .trending .clubs-ranking .club-details--name {
@@ -506,6 +546,7 @@ nav button {
   right: 1.4rem;
 }
 .articles--card--btn-box button {
+  border-color: #ebeef3 !important;
   padding: 0.6rem 1rem;
   font-size: 1.2rem;
 }
@@ -519,18 +560,20 @@ nav button {
   margin-left: 1.6rem;
 }
 .articles--card--content {
+  font-weight: 500;
   gap: 1.8rem;
 }
 .articles--card--content--date {
   color: #262626;
   font-size: 1.4rem;
-  font-weight: 400;
 }
 .articles--card--content--title {
   font-size: 2.2rem;
 }
 .articles--card--content--details {
   font-size: 1.6rem;
+  padding-right: 1.3rem;
+  line-height: 123.9%;
   color: #696868;
 }
 .articles--pagination {
@@ -540,6 +583,9 @@ nav button {
 footer .subscription {
   margin-top: 8.2rem;
   background-color: #ebeef3;
+}
+footer .subscription--box {
+  padding: 8.365rem 0rem 8rem 6.8rem;
 }
 footer .subscription--box--title {
   background: -webkit-linear-gradient(#262626, #b8c2ce);
@@ -553,15 +599,27 @@ footer .subscription--box--email {
   margin-top: 4.3rem;
 }
 footer .subscription--box--email--input {
+  background-color: transparent;
   font-size: 2.1rem;
-  padding: 1.5rem 2.4rem;
+  line-height: 0.28;
+  padding: 1.365rem 5.691rem 2.4rem 2.4rem !important;
   width: 51.4rem;
+  border-top-right-radius: 0.6rem !important;
+  border-bottom-right-radius: 0.6rem !important;
+  border-color: #262626;
+  border-width: 0.3rem;
+  font-weight: 400;
+}
+footer .subscription--box--email--input::placeholder {
+  color: rgba(35, 35, 35, 0.37);
 }
 footer .subscription--box--email--btn {
   width: 7.4rem;
   height: 100%;
   font-size: 3.5rem;
   padding: auto 3rem;
+  border-top-right-radius: 0.6rem !important;
+  border-bottom-right-radius: 0.6rem !important;
 }
 footer .subscription--image {
   width: 52rem;
@@ -575,6 +633,12 @@ footer .subscription--image {
   }
   footer .subscription .subscription--image {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer .subscription .subscription--box {
+    text-align: center;
+    padding: 1rem;
   }
 }
 @media only screen and (max-width: 390px) {
@@ -594,23 +658,23 @@ footer .subscription--image {
   }
 }
 footer .social-bar {
-  padding: 4.2rem 1rem;
+  padding: 4.8rem 0rem 8.287rem;
 }
 footer .social-bar--list {
   gap: 2.3rem;
 }
 footer .social-bar--list--icon-container {
-  width: 4.4rem;
-  height: 4.4rem;
+  width: 5rem;
+  height: 5rem;
   background-color: #262626;
 }
 footer .social-bar--list--icon-container--icon {
-  font-size: 3.5rem;
   color: white;
 }
 footer .social-bar .pagination-container {
   background-color: transparent;
   width: auto;
+  margin: 0 !important;
   padding: 0 !important;
 }
 

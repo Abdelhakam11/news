@@ -18,7 +18,7 @@
         @include cover-title(white, 1.6rem, transparent, start);
         &--title-box {
           width: 100%;
-          padding: 0 2rem;
+          padding: 1.6rem 1.8rem 1.2rem;
           background: linear-gradient(
             rgba(255, 255, 255, 0.8),
             rgba(255, 255, 255, 0.2)
@@ -53,18 +53,30 @@
   }
   .clubs-ranking {
     &--table-container {
-      padding: 2rem 1.5rem 1.2rem;
+      padding: 1.9rem 0 1.2rem;
       background-color: $light-color;
       min-height: 30rem;
       &--custom-table {
-        overflow-x: auto;
-        height: 26.8rem;
+        height: 26rem;
+        th:first-child,
+        td:first-child {
+          padding-left: 3.1rem;
+        }
+        .club-details {
+          &--name {
+            font-size: 1.3rem;
+            font-weight: 700;
+          }
+          &--logo {
+            margin-left: 1.081rem;
+            margin-right: 0.691rem;
+          }
+        }
         thead {
           border-bottom: none;
           th {
             border-bottom: none;
             font-size: 1.6rem;
-            font-weight: 600;
           }
         }
         tbody {
@@ -78,10 +90,22 @@
         }
       }
     }
+    @media only screen and (min-width: $screen-lg) and (max-width: 1300px) {
+      .clubs-ranking {
+        &--table-container {
+          &--custom-table {
+            .club-details {
+              &--logo {
+                margin: 0 0.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
     @media only screen and (max-width: $screen-sm) {
       .clubs-ranking {
         &--table-container {
-          padding: 0;
           min-height: auto;
         }
       }

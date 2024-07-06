@@ -28,14 +28,23 @@ body {
 }
 nav {
   margin: 0 calc(-1 * $main-lg-padding);
-  padding: 0 $main-lg-padding;
+  padding: 2.2rem $main-lg-padding !important;
   background-color: white;
   a {
     font-size: 1.5rem !important;
+    font-family: "DM Sans", sans-serif;
+    color: rgb(38, 38, 38, 0.6) !important;
     padding: 1rem !important;
+    font-weight: 400;
   }
-  button {
+  .search-btn {
     font-size: 1.4rem !important;
-    padding: 0.15rem 1.3rem !important;
+    padding: 0.8rem 1.5rem !important;
+    border-radius: 0.6rem;
+    background: linear-gradient(#b8c2ce, #5d6268);
+    border: none !important;
+  }
+  .navbar-toggler{
+    font-size: 2rem !important;
   }
 }
