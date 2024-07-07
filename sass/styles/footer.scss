@@ -1,0 +1,114 @@
+//footer
+footer {
+  .subscription {
+    margin-top: 8.2rem;
+    background-color: $light-color;
+    &--box {
+      padding: 8.365rem 0rem 8rem 6.8rem;
+      &--title {
+        @include textLinear(#262626, $main-color);
+        font-size: 6rem;
+        font-weight: 900;
+      }
+      &--email {
+        margin-top: 4.3rem;
+        &--input {
+          background-color: transparent;
+          font-size: 2.1rem;
+          line-height: 0.28;
+          padding: 1.365rem 5.691rem 2.4rem 2.4rem !important;
+          width: 51.4rem;
+          border-top-right-radius: 0.6rem !important;
+          border-bottom-right-radius: 0.6rem !important;
+          border-color: #262626;
+          border-width: 0.3rem;
+          font-weight: 400;
+          &::placeholder {
+            color: rgb(35, 35, 35, 0.37);
+          }
+        }
+        &--btn {
+          width: 7.4rem;
+          height: 100%;
+          font-size: 3.5rem;
+          padding: auto 3rem;
+          border-top-right-radius: 0.6rem !important;
+          border-bottom-right-radius: 0.6rem !important;
+        }
+      }
+    }
+    &--image {
+      width: 52rem;
+      background: url("../assets/images/main/Vector.png");
+      background-position: top left;
+      background-repeat: no-repeat;
+    }
+    @media only screen and (max-width: 1300px) {
+      .subscription {
+        &--box {
+          &--email {
+            &--input {
+              width: 39rem;
+            }
+          }
+        }
+        &--image {
+          width: 100%;
+        }
+      }
+    }
+    @media only screen and (max-width: $screen-sm) {
+      .subscription {
+        &--box {
+          text-align: center;
+          padding: 1rem;
+        }
+      }
+    }
+    @media only screen and (max-width: 390px) {
+      .subscription {
+        &--box {
+          &--title {
+            font-size: 5rem;
+          }
+          &--email {
+            &--input {
+              width: 100%;
+              padding-left: 0.5rem;
+              font-size: 1.5rem;
+            }
+            &--btn {
+              width: 4rem;
+              height: 100%;
+              font-size: 2rem;
+              padding: auto 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .social-bar {
+    padding: 4.8rem 0rem 8.287rem;
+    &--list {
+      gap: 2.3rem;
+      &--icon-container {
+        width: 5rem;
+        height: 5rem;
+        background-color: #262626;
+        &--icon {
+          color: white;
+        }
+      }
+    }
+    .pagination-container {
+      background-color: transparent;
+      width: auto;
+      margin: 0 !important;
+      padding: 0 !important;
+      &--menu {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

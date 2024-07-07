@@ -1,0 +1,52 @@
+.categories {
+  margin-top: 8rem !important;
+  &--title {
+    font-size: 2.8rem;
+    margin-bottom: 1.6rem;
+  }
+  &--container {
+    --bs-gutter-x: 3rem !important;
+    &--category {
+      gap: 3rem !important;
+      &--title-box {
+        background-color: $light-color;
+        padding: 3.8rem 1.1rem;
+        &--title {
+          font-size: 3.7rem;
+          font-weight: 900;
+          @include textLinear(#262626, $main-color);
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: $screen-sm) {
+    .categories {
+      margin-top: 2rem !important;
+      &--container {
+        &--category {
+          gap: 1rem !important;
+          &--title-box {
+            padding: 1rem;
+            &--title {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: $screen-md) {
+    .categories {
+      &--container {
+        &--category {
+          &--title-box {
+            &--title {
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

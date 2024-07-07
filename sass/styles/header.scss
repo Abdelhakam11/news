@@ -1,0 +1,154 @@
+.header-container {
+  padding-top: 11rem;
+  &--main-title-box {
+    line-height: normal;
+
+    &--title {
+      z-index: -1;
+      padding-top: 11.2rem;
+      line-height: 0.75;
+      font-size: 8rem;
+      line-height: 0.75;
+      font-weight: 900;
+      @include textLinear(#262626, $main-color);
+      text-transform: uppercase;
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transform: translateX(-20%);
+        content: url("../assets/images/main/basketball_sport_icon.png");
+        z-index: -2;
+        filter: grayscale(100%);
+      }
+    }
+  }
+
+  &--cards-list {
+    &--day {
+      display: inline-block;
+      margin-bottom: 2.4rem !important;
+      font-size: 2rem;
+      padding: 0.4rem 1.6rem;
+      color: $main-color;
+      background-color: $dark-color;
+    }
+    &--container {
+      gap: 3rem;
+      &--card {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        overflow: hidden;
+        min-height: 23rem;
+        &--info {
+          @include cover-title(
+            black,
+            1.6rem,
+            -webkit-linear-gradient(rgba(255, 255, 255, 0), white),
+            start
+          );
+          padding-left: 1.8rem !important;
+          &--title {
+            font-size: 1.6rem;
+            &--date {
+              font-size: 1rem;
+              color: #262626ac;
+            }
+          }
+        }
+      }
+    }
+  }
+  &--details {
+    left: 50% !important;
+    top: 75% !important;
+    transform: translate(-35%, 0);
+    &--info {
+      font-size: 1.8rem;
+      margin-bottom: 2.4rem !important;
+    }
+    &--btn {
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 1.2rem 3.2rem;
+      border-radius: 0.6rem;
+      color: $dark-color;
+      line-height: 38px;
+      letter-spacing: calc(0.09 * 2rem);
+      font-weight: bold;
+    }
+  }
+  @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .header-container {
+      &--main-title-box {
+        &--title {
+          font-size: 5rem;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1400px) and (max-width: 1488px) {
+    .header-container {
+      &--main-title-box {
+        &--title {
+          font-size: 7rem;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    .header-container {
+      &--main-title-box {
+        &--title {
+          font-size: 6rem;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .header-container {
+      &--main-title-box {
+        &--title {
+          font-size: 4.8rem;
+        }
+      }
+      &--cards-list {
+        margin-top: 10rem !important;
+      }
+    }
+  }
+  @media only screen and (max-width: 850px) {
+    .header-container {
+      &--main-title-box {
+        &--title {
+          padding: 0 !important;
+          top: -11rem !important;
+          font-size: 5.5rem;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .header-container {
+      &--main-title-box {
+        &--title {
+          &::before {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transform: translate(-40%, -30%) scale(0.5);
+            content: url("../assets/images/main/basketball_sport_icon.png");
+            z-index: -2;
+            filter: grayscale(100%);
+          }
+        }
+      }
+      &--cards-list {
+        margin-top: 18rem !important;
+      }
+    }
+  }
+}

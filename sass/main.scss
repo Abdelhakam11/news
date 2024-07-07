@@ -1,0 +1,14 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+//base layout
+@import "./styles/base.scss";
+//header
+@import "./styles/header.scss";
+//sections
+@import "./styles/categories-section.scss";
+@import "./styles/covers-section.scss";
+@import "./styles/trending-section.scss";
+@import "./styles/articles.scss";
+//footer
+@import "./styles/footer.scss";

@@ -1,0 +1,122 @@
+.trending {
+  margin-top: 7.2rem;
+  h3 {
+    margin-bottom: 1.6rem;
+    font-size: 2.8rem;
+  }
+  &--container {
+    --bs-gutter-x: 3rem;
+  }
+  .trending-news {
+    &--main-card {
+      background-image: url("../assets/images/sports/karate-fighters\ 1.png");
+      background-size: cover;
+      background-position: center;
+      min-height: 30rem;
+      position: relative;
+      &--info {
+        @include cover-title(white, 1.6rem, transparent, start);
+        &--title-box {
+          width: 100%;
+          padding: 1.6rem 1.8rem 1.2rem;
+          background: linear-gradient(
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0.2)
+          );
+        }
+      }
+    }
+    &--cards-container {
+      &--list {
+        background-color: $light-color;
+        min-height: 30rem;
+        padding: 1.4rem;
+        &--card {
+          &--info-box {
+            &--title {
+              font-size: 1.6rem;
+            }
+            &--date {
+              font-size: 1rem;
+            }
+          }
+        }
+        &--btn-box {
+          button {
+            background-color: $main-color;
+            font-size: 1.4rem;
+            padding: 0.6rem 0.7rem;
+          }
+        }
+      }
+    }
+  }
+  .clubs-ranking {
+    &--table-container {
+      padding: 1.9rem 0 1.2rem;
+      background-color: $light-color;
+      min-height: 30rem;
+      &--custom-table {
+        height: 26rem;
+        th:first-child,
+        td:first-child {
+          padding-left: 3.1rem;
+        }
+        .club-details {
+          &--name {
+            font-size: 1.3rem;
+            font-weight: 700;
+          }
+          &--logo {
+            margin-left: 1.081rem;
+            margin-right: 0.691rem;
+          }
+        }
+        thead {
+          border-bottom: none;
+          th {
+            border-bottom: none;
+            font-size: 1.6rem;
+          }
+        }
+        tbody {
+          tr {
+            &:last-child {
+              th {
+                border-bottom: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media only screen and (min-width: $screen-lg) and (max-width: 1300px) {
+      .clubs-ranking {
+        &--table-container {
+          &--custom-table {
+            .club-details {
+              &--logo {
+                margin: 0 0.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: $screen-sm) {
+      .clubs-ranking {
+        &--table-container {
+          min-height: auto;
+        }
+      }
+      .club-details {
+        &--name {
+          text-wrap: nowrap;
+        }
+        &--logo {
+          width: 1.5rem;
+        }
+      }
+    }
+  }
+}

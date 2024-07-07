@@ -1,0 +1,50 @@
+.articles {
+  margin-top: 7.2rem;
+  &--container {
+    --bs-gutter-x: 3rem;
+  }
+  &--title {
+    font-size: 2.8rem;
+    margin-bottom: 1.6rem;
+  }
+  &--card {
+    &--btn-box {
+      top: 1.4rem;
+      right: 1.4rem;
+      button {
+        border-color: $light-color !important;
+        padding: 0.6rem 1rem;
+        font-size: 1.2rem;
+      }
+    }
+    &--author-box {
+      margin: 2.8rem 0 2rem;
+      &--name {
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        margin-left: 1.6rem;
+      }
+    }
+    &--content {
+      font-weight: 500;
+      gap: 1.8rem;
+      &--date {
+        color: #262626;
+        font-size: 1.4rem;
+      }
+      &--title {
+        font-size: 2.2rem;
+      }
+      &--details {
+        font-size: 1.6rem;
+        padding-right: 1.3rem;
+        line-height: 123.9%;
+        color: #696868;
+      }
+    }
+  }
+  &--pagination {
+    background-color: transparent;
+  }
+}
